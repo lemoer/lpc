@@ -12,13 +12,24 @@ We decided, that it would be the best idea to create a network with the level âˆ
 
 So. Here we go! :smile:
 
-
 ## commands
 
 **install lpc:**
 
 ``` shell
 ./lpc.sh
+```
+
+This script will create the following network:
+
+```
+1st namespace: machine 1 (m1)
+2nd namespace: machine 2 (m2)
+3rd namespace: machine 3 (m3)
+
+(m1,veth0) 10.101.102.1/24 <--> 10.101.102.2/24 (m2,veth1)
+(m2,veth2) 10.102.103.2/24 <--> 10.102.103.3/24 (m3,veth3)
+(m3,veth4) 10.103.101.3/24 <--> 10.101.102.1/24 (m1,veth5)
 ```
 
 **start tcpdump:**
