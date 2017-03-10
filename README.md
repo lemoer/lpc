@@ -30,10 +30,6 @@ ip netns exec m2 ping -c 1 8.8.8.8
 ./lpc.sh cleanup
 ```
 
-## with ttl 
-
-```
-
 ## step 1 - without ttlfix
 
 ```
