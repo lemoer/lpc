@@ -1,8 +1,17 @@
 # lpc - large packet collider
 
-## general stuff
+The basic idea is simple. We try use NAT and network namespaces to create a routing loop.
+The idea came up, where somebody decided that's a good idea to create a network with three
+NATs consecutively:
 
-- we use network namespaces (```m1```, ```m2```, ```m3```)
+![picture of a traceroute with 3 natting routers](results/idea.jpg)
+
+Then we discussed, how we can create a network with a lot of NATs. Everyone knows, that
+the level of goodness of IPv4 is defined by the number of NATs passed to the Internet.
+We decided, that it would be the best idea to create a network with the level ∞.
+
+So. Here we go! :smile:
+
 
 ## commands
 
