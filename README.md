@@ -1,6 +1,40 @@
+# lpc - large packet collider
 
+## general stuff
+
+- we use network namespaces (```m1```, ```m2```, ```m3```)
+
+## commands
+
+**install lpc:**
+
+``` shell
+./lpc.sh
+```
+
+**start tcpdump:**
+
+``` shell
+ip netns exec m2 tcpdump -n -i veth1 icmp
+```
+
+**start a single ping:**
+
+``` shell
+ip netns exec m2 ping -c 1 8.8.8.8
+```
+
+**cleanup:**
+
+``` shell
+./lpc.sh cleanup
+```
 
 ## with ttl 
+
+```
+
+## step 1 - without ttl_fix
 
 ```
 root@orange /h/lemoer# ip netns exec m2 tcpdump -n -i veth1 icmp
