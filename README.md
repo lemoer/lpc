@@ -34,7 +34,7 @@ ip netns exec m2 ping -c 1 8.8.8.8
 
 ```
 
-## step 1 - without ttl_fix
+## step 1 - without ttlfix
 
 ```
 root@orange /h/lemoer# ip netns exec m2 tcpdump -n -i veth1 icmp
