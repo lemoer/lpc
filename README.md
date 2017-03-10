@@ -122,3 +122,8 @@ listening on veth1, link-type EN10MB (Ethernet), capture size 262144 bytes
 ```
 [Read more...](results/with_ttl_fix.md)
 
+## step 3 - conntrack
+
+The next issue seems that the ```conntrack```-table is full after a finite number of
+entries. So I decided to write a daemon which continuously flushes ```conntrack```.
+But often seems so slow, because it's in the user space. We will go on later...
